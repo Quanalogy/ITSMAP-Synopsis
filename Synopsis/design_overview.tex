@@ -2,19 +2,25 @@
 
 \chapter{Design overview}
 
-\begin{figure}[!htb]
+
+\begin{figure}
 	\centering
-	\includegraphics[width=0.45\textwidth]{P.jpg}
-	\caption{Overview for the main portrait flow}
-	\label{fig:p}
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{P.jpg}
+		\caption{Overview for the main portrait flow.}
+		\label{fig:p}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{L.jpg}
+		\caption{Overview for the main tablet/landscape flow.}
+		\label{fig:l}
+	\end{subfigure}
+	\caption{Views of the flow in portrait and landscape orientation.}
 \end{figure}
 
-\begin{figure}[!htb]
-	\centering
-	\includegraphics[width=0.45\textwidth]{L.jpg}
-	\caption{Overview for the main tablet/landscape flow}
-	\label{fig:l}
-\end{figure}
 
 \section{Activities}
 The application will be designed for usage in portrait mode on hand-held devices, as well as landscape mode on larger devices e.g. tablets. Since the layout changes, the design of the application also changes to a large degree, in order to deliver the best possible user flow in each case.
