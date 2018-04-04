@@ -1,0 +1,28 @@
+% !TeX spellcheck = en_US
+\documentclass[article]{memoir}
+
+\usepackage[utf8]{inputenc}
+
+% Fix blank page after mainmatter. https://tex.stackexchange.com/a/153690
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\@smemmain}{\cleardoublepage}{\clearpage}{}{}
+\makeatother
+
+\begin{document}
+
+\frontmatter
+
+\tableofcontents
+
+\mainmatter
+
+\input{app_vision.tex}
+
+\input{personal_vision.tex}
+
+\input{user_stories.tex}
+
+\input{design_overview.tex}
+
+\end{document}
