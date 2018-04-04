@@ -2,7 +2,7 @@
 \documentclass[article, oneside]{memoir}
 
 % Fixing margin from https://tex.stackexchange.com/a/65636
-\setulmarginsandblock{1.5cm}{1.5cm}{*}
+%\setulmarginsandblock{1.5cm}{1.5cm}{*}
 \setlrmarginsandblock{2.5cm}{2.5cm}{*}
 \checkandfixthelayout
 
@@ -16,10 +16,22 @@
 
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{subcaption}
+\usepackage{url}
+\usepackage{hyperref}
+
+\usepackage{mathpazo}% palatino + matematik
+\usepackage{soul} % lege lege
+\sodef\an{}{0.2em}{.9em plus.6em}{1em plus.1em minus.1em}
+\newcommand\stext[1]{\an{\scshape#1}}
 
 \begin{document}
 
 \frontmatter
+
+
+\input{front.tex}
+\clearpage
 
 \tableofcontents
 
@@ -32,5 +44,18 @@
 \input{user_stories.tex}
 
 \input{design_overview.tex}
+
+\backmatter
+
+\chapter{References}
+Front page inspired by the example in \href{http://math.au.dk/samarbejde/latex/}{Daleifs \LaTeX book - http://math.au.dk/samarbejde/latex/}.\\
+\\
+Rich image designed with the following resources:
+\begin{itemize}
+	\item \href{https://www.paylesscar.com/en/cars/vehicles/us}{Car - https://www.paylesscar.com/en/cars/vehicles/us}
+	\item \href{https://www.justbeginning.org/donate-now}{Speedometer - https://www.justbeginning.org/donate-now}
+	\item \href{http://www.csofttech.com/android-app-development.html}{Phone - http://www.csofttech.com/android-app-development.html}
+	\item \href{http://www.romangadgets.com/girl-wondering/}{Person - http://www.romangadgets.com/girl-wondering/}
+\end{itemize}
 
 \end{document}
