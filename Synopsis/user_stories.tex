@@ -4,6 +4,7 @@
 
 \section{Setup}
 \emph{Prerequisite:} User starts app for the first time\\
+
 \emph{Scenario}
 \begin{itemize}
 \item Setup screen is shown
@@ -14,42 +15,50 @@
 \end{itemize}
 
 \section{Fill up gas}
-\emph{Prerequisite}
-User has started app and completed setup
-Default view is shown (Map with nearest gas stations and prices)
+\emph{Prerequisite:} User has started app and completed setup\\
+Default view is shown (Map with nearest gas stations and prices)\\
+
 \emph{Scenario}
-User selects desired gas station
-Navigation  directions is presented using maps provider
-When user has been at the gas station for a minimum of two minutes, a notification is shown prompting the user to enter information about fuel amount and price
-App sends information about current price to remote server
+\begin{itemize}
+	\item User selects desired gas station
+\item Navigation  directions is presented using maps provider
+\item When user has been at the gas station for a minimum of two minutes, a notification is shown prompting the user to enter information about fuel amount and price
+\item App sends information about current price to remote server
+\end{itemize}
+
 
 \section{Ledger view}
-\emph{Prerequisite}
-User has completed setup and started app
+\emph{Prerequisite} User has completed setup and started app\\
+
 \emph{Scenario}
-User is presented with list with previous gas billings (if any), and statistics
-User has option to manually enter gas action visits
+\begin{itemize}
+	\item User is presented with list with previous gas billings (if any), and statistics
+	\item User has option to manually enter gas action visits
+\end{itemize}
 
 \section{Enter gas prices}
-\emph{Prerequisite}
-User has completed setup and started app
-Default map view is shown
+\emph{Prerequisite} User has completed setup and started app\\
+Default map view is shown \\
 
 \emph{Scenario}
-User selects current gas station from the map/list
-User chooses to enter prices
-User updates prices with current information and presses OK
-App sends data to remote server
+\begin{itemize}
+	\item User selects current gas station from the map/list
+\item User chooses to enter prices
+\item User updates prices with current information and presses OK
+\item App sends data to remote server
+\end{itemize}
 
 \section{Fill gas in transit}
-\emph{Prerequisite}
-User has completed setup and started app
-Default map view is shown
-\emph{Scenario}
-Users selects navigate
-User enters start point and destination
-App finds lowest prices along the route and presents most likely options to user
-User selects station and starts navigation
-Default navigation provider is started
+\emph{Prerequisite} User has completed setup and started app\\
+Default map view is shown\\
 
+\emph{Scenario}
+\begin{itemize}
+	\item Users selects navigate
+\item User enters start point and destination
+\item App finds lowest prices along the route and presents most likely options to user
+\item User selects station and starts navigation
+\item Default navigation provider is started
+
+\end{itemize}
 
