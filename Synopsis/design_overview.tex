@@ -14,7 +14,7 @@ As a whole, the application will use a single background service for data synchr
 	\item Enter ledger information.
 \end{itemize}
 
-These fragments are utilized in 3 activities.  Diagrams showing the flow between activities in both portrait (mobile) and landscape (tablet) mode are shown in Figure \ref{fig:p} and \ref{fig:l}.
+These fragments are utilized in 3 activities.  Diagrams showing the flow between activities in both portrait (mobile) and landscape (tablet) mode are shown in Figure \ref{fig:p} and \ref{fig:l}. In both cases, the entrance point of the system, prompting the user to login, has a common flow as shown in Figure \ref{fig:login}.
 
 \subsection{Android components}
 The following components will be utilized in the project:
@@ -76,4 +76,11 @@ The main screen is split into two pieces, each showing a different fragment. For
 	\includegraphics[width=\textwidth]{L.png}
 	\caption{Overview for the main tablet/landscape flow.}
 	\label{fig:l}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{Login.png}
+	\caption{Overview for the login flow. The design is similar for landscape and portrait, and only shown in one variation here.}
+	\label{fig:login}
 \end{figure}
