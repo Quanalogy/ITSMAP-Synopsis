@@ -4,53 +4,32 @@
 In this section, we will outline the envisioned activities, services etc. we will be using to implement the application.
 
 \section{Overview}
-As a whole, the application will use 1 background service for data synchronization, as well as a set of fragments, in order to properly support both portrait and tablet landscape modes. The envisioned fragments include
+As a whole, the application will use a single background service for data synchronization, as well as a set of fragments, in order to properly support both phone portrait and tablet landscape modes. The envisioned fragments include
 \begin{itemize}
-	\item Map with stations
-	\item List of stations
-	\item Show station
-	\item Enter price data
-	\item Navigate to station
-	\item Ledger list
-	\item Enter ledger information
+	\item Map with stations.
+	\item List of stations.
+	\item Show station.
+	\item Enter price data.
+	\item Ledger list.
+	\item Enter ledger information.
 \end{itemize}
 
-These fragments are utilized in 3 activities. 
-
-Diagrams showing the flow between activities in both portrait (mobile) and landscape (tablet) mode are shown in Figure \ref{fig:l} and \ref{fig:p}.
-
-\begin{figure}[h]
-	\centering
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{P.jpg}
-		\caption{Overview for the main portrait flow.}
-		\label{fig:p}
-	\end{subfigure}
-	\quad
-	\begin{subfigure}[b]{0.45\textwidth}
-		\centering
-		\includegraphics[width=\textwidth]{L.jpg}
-		\caption{Overview for the main tablet/landscape flow.}
-		\label{fig:l}
-	\end{subfigure}
-	\caption{Views of the flow in portrait and landscape orientation.}
-\end{figure}
+These fragments are utilized in 3 activities.  Diagrams showing the flow between activities in both portrait (mobile) and landscape (tablet) mode are shown in Figure \ref{fig:p} and \ref{fig:l}.
 
 \subsection{Android components}
 The following components will be utilized in the project:
 \begin{itemize}
-	\item Activities
-	\item Fragments
-	\item Service
-	\item Intents to communicate through local broadcasts
-	\item FireBase
-	\item Resource externalization of user interface strings for multi-language support
-	\item Communication over the internet through FireBase
-	\item Asynchronous processing in terms of data reads from FireBase
-	\item Support both tablet end mobile screen sizes
-	\item Use a custom app icon
-	\item Use a custom color scheme
+	\item Activities.
+	\item Fragments.
+	\item Service.
+	\item Intents to communicate through local broadcasts.
+	\item Firebase for data persistence.
+	\item Resource externalization of user interface strings for multi-language support.
+	\item Communication over the internet through Firebase.
+	\item Asynchronous processing in terms of data reads from Firebase.
+	\item Support both tablet end mobile screen sizes.
+	\item Use a custom application icon.
+	\item Use a custom color scheme.
 \end{itemize}
 
 \section{Activities}
@@ -76,7 +55,7 @@ In landscape mode, the dynamics of user operation has changed, and fragments wil
 	\item View ledger
 \end{itemize}
 
-The main screen is split into two pieces, each showing a different fragment. For instance, it could be the map mode from portrait on the left side, and the right side would show the prices of the last selected station. The map mode could be swapped for the list view while still keeping the prices list. While at a station, the 'show prices' fragment could be replaced by a 'report prices' fragment. When planning a route, the map fragment would be shown in union with the 'route mode' fragment.
+The main screen is split into two pieces, each showing a different fragment. For instance, it could be the map mode from portrait on the left side, and the right side would show the prices of the last selected station. The map mode could be swapped for the list view while still keeping the prices list. While at a station, the 'show prices' fragment could be replaced by a 'report prices' fragment.
 
 \section{Risks}
 \begin{itemize}
@@ -84,3 +63,17 @@ The main screen is split into two pieces, each showing a different fragment. For
 	\item The requirement for backend API.
 	\item The acquisition of data.
 \end{itemize}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.95\textwidth]{P.png}
+	\caption{Overview for the main portrait flow.}
+	\label{fig:p}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=\textwidth]{L.png}
+	\caption{Overview for the main tablet/landscape flow.}
+	\label{fig:l}
+\end{figure}
