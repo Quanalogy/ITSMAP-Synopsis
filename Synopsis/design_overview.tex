@@ -1,6 +1,22 @@
 % !TeX spellcheck = en_US
 
 \chapter{Design overview}
+In this section, we will outline the envisioned activities, services etc. we will be using to implement the application.
+
+\section{Overview}
+As a whole, the application will use 1 background service for data synchronization, as well as a set of fragments, in order to properly support both portrait and tablet landscape modes. The envisioned fragments include
+\begin{itemize}
+	\item Map with stations
+	\item List of stations
+	\item Show station
+	\item Enter price data
+	\item Navigate to station
+	\item Ledger list
+	\item Enter ledger information
+\end{itemize}
+
+These fragments are utilized in 3 activities. 
+
 Diagrams showing the flow between activities in both portrait (mobile) and landscape (tablet) mode are shown in Figure \ref{fig:l} and \ref{fig:p}.
 
 \begin{figure}[h]
@@ -21,6 +37,22 @@ Diagrams showing the flow between activities in both portrait (mobile) and lands
 	\caption{Views of the flow in portrait and landscape orientation.}
 \end{figure}
 
+\subsection{Android components}
+The following components will be utilized in the project:
+\begin{itemize}
+	\item Activities
+	\item Fragments
+	\item Service
+	\item Intents to communicate through local broadcasts
+	\item FireBase
+	\item Resource externalization of user interface strings for multi-language support
+	\item Communication over the internet through FireBase
+	\item Asynchronous processing in terms of data reads from FireBase
+	\item Support both tablet end mobile screen sizes
+	\item Use a custom app icon
+	\item Use a custom color scheme
+\end{itemize}
+
 \section{Activities}
 The application will be designed for usage in portrait mode on hand-held devices, as well as landscape mode on larger devices e.g. tablets. Since the layout changes, the design of the application also changes to a large degree, in order to deliver the best possible user flow in each case.
 
@@ -31,7 +63,6 @@ I portrait mode it will include the following activities:
 	\item Map mode (Default)
 	\item List mode
 	\item Show prices
-	\item Route mode
 	\item Report prices
 	\item View ledger
 	\item Enter ledger information
